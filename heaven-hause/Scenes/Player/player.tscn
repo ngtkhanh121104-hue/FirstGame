@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b6fc8vh6gd66a"]
+
+[ext_resource type="Script" uid="uid://b22lw2e20sew2" path="res://Scenes/Player/player.gd" id="1_uvnfx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a3d8c"]
+radius = 1.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uvnfx"]
+radius = 20.0
+
+[node name="Player" type="CharacterBody2D" unique_id=409891644]
+script = ExtResource("1_uvnfx")
+
+[node name="BodyVisual" type="Polygon2D" parent="." unique_id=909302600]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=540104169]
+shape = SubResource("CircleShape2D_a3d8c")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=232929720]
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1341547738]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=164255705]
+shape = SubResource("CircleShape2D_uvnfx")
+
+[connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]
+[connection signal="area_exited" from="InteractionArea" to="." method="_on_interaction_area_area_exited"]

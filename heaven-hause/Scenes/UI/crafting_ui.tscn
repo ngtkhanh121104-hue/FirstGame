@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dmrnnnwksq6gt"]
+
+[ext_resource type="Script" uid="uid://cue1ievl7r6gu" path="res://Scripts/Inventory/crafting_ui.gd" id="1_jqbsb"]
+
+[node name="CraftingUI" type="CanvasLayer" unique_id=602279376]
+script = ExtResource("1_jqbsb")

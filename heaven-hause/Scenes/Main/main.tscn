@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b4kuouwecwi14"]
+
+[ext_resource type="Script" uid="uid://dc3h405m75di3" path="res://Scripts/World/main.gd" id="1_1r6ip"]
+[ext_resource type="PackedScene" uid="uid://b6fc8vh6gd66a" path="res://Scenes/Player/player.tscn" id="2_lixft"]
+
+[node name="Main" type="Node2D" unique_id=1042624612]
+script = ExtResource("1_1r6ip")
+
+[node name="Ground" type="TileMapLayer" parent="." unique_id=1666211381]
+
+[node name="Player" parent="." unique_id=409891644 instance=ExtResource("2_lixft")]
+position = Vector2(644, 365)
+move_speed = 150.0
